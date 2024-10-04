@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일가이드 - Grid</title>
+
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="./guide.css">
+  <link rel="stylesheet" href="/_css/reset.css?v=1.0">
+  <link rel="stylesheet" href="/_css/font.css?v=1.0">
+  <link rel="stylesheet" href="/_css/variables.css?v=1.0">
+  <link rel="stylesheet" href="/_css/element.css?v=1.0">
+  <link rel="stylesheet" href="/_css/layout.css?v=1.0">
+  <link rel="stylesheet" href="/_css/common.css?v=1.0">
+  <link rel="stylesheet" href="/_css/style.css?v=1.0">
+  <script src="/_js/common.js?v=1.0" defer></script>
+
+</head>
+
+<body>
+  <div class="guide_wrap">
+    <div class="guide-detail__inner">
+      <a href="./index.html" class="btn_back_index"></a>
+      <div class="guide__content">
+        <div class="title">
+          <span>03</span>
+          <b>Grid</b>
+        </div>
+        <div class="content">
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 0;">
+                <h3>PC Grid</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="grid_system">
+                <div class="img">
+                  <img src="./_img/desktop.png" alt="데스트탑">
+                </div>
+                <div class="desc">
+                  <h1>DESKTOP(PC)</h1>
+                  <p>
+                    layout : 1024px ~
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 25%;">
+                <h3>Pad Grid</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="grid_system">
+                
+                <div class="desc">
+                  <h1>Pad</h1>
+                  <p>
+                    layout : 768px ~ 1023px
+                  </p>
+                  <p class="code">
+                    code : @media screen and (min-width: 768px) and (max-width:1023px) {}
+                  </p>
+                </div>
+                <div class="img">
+                  <img src="./_img/tablet.png" alt="태블릿">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 50%;">
+                <h3>Mobile Grid</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="grid_system">
+                <div class="img">
+                  <img src="./_img/mobile.png" alt="모바일">
+                </div>
+                <div class="desc">
+                  <h1>Mobile</h1>
+                  <p>
+                    layout : 0px ~ 767px
+                  </p>
+                  <p class="code">
+                    code : @media screen and (max-width:767px) {}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

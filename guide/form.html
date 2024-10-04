@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일가이드 - Form</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- address daum api -->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <!-- NiceSelect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="./guide.css">
+  <link rel="stylesheet" href="/_css/reset.css?v=1.0">
+  <link rel="stylesheet" href="/_css/font.css?v=1.0">
+  <link rel="stylesheet" href="/_css/variables.css?v=1.0">
+  <link rel="stylesheet" href="/_css/element.css?v=1.0">
+  <link rel="stylesheet" href="/_css/layout.css?v=1.0">
+  <link rel="stylesheet" href="/_css/common.css?v=1.0">
+  <link rel="stylesheet" href="/_css/style.css?v=1.0">
+  <link rel="stylesheet" href="/_css/account.css?v=1.0">
+  <link rel="stylesheet" href="/_css/mypage.css?v=1.0">
+  <link rel="stylesheet" href="/_css/attribute.css?v=1.0">
+  <script src="/_js/common.js?v=1.0" defer></script>
+
+</head>
+
+<body>
+  <div class="guide_wrap">
+    <div class="guide-detail__inner">
+      <a href="./index.html" class="btn_back_index"></a>
+      <div class="guide__content">
+        <div class="title">
+          <span>04</span>
+          <b>Form</b>
+        </div>
+        <div class="content">
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 0%;">
+                <h3>기본구조</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="form_div">
+                <h5>기본 Form HTML 구조</h5>
+                <div class="form">
+                  <xmp>
+                    <form action="" class="form_signup">
+                      <fieldset>
+                        <div class="account_input">
+                          <label for="" class="input_label">이름 <span class="asterisk">*</span></label>
+                          <div class="account_content">
+                            <input type="text" placeholder="이름을 입력해 주세요">
+                          </div>
+                          <p class="error">이름을 입력해 주세요.</p>
+                          <small class="noti">알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요. </small>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </xmp>
+                  <xmp>
+                    <div class="regA_input">
+                      <label for="" class="input_label">상품 타이틀 <span class="asterisk">*</span></label>
+                      <div class="regA_content">
+                        <input type="text" placeholder="10자 이상 입력">
+                      </div>
+                      <!-- <p class="error"></p> -->
+                    </div>
+                  </xmp>
+                  <p class="mt20">- 최상단 form 태그로 감싸서 퍼블리싱 진행</p>
+                  <p class="mt8">- form 태그 하단 fieldset으로 감싸서 진행</p>
+                  <p class="mt8">- form 클래스 명은 <b class="c_brand">form_name</b></p>
+                  <p class="mt8">- <b class="c_brand">name_input</b>이라는 div 안에 <b class="c_brand">.input_label 과 .name_content</b> 이라는 div로 구분</p>
+                  <p class="mt8">- .name_input : 폼 요소를 둘러싸는 div, 이 영역안에 모든게 들어와야함.</p>
+                  <p class="mt8">- .input_label : 폼 레이블, 폼 타이틀</p>
+                  <p class="mt8">- .name_content : 폼 컨텐츠</p>
+                  <p class="mt8">- .error : 유효성 검사 문구</p>
+                  <p class="mt8">- small.noti : 폼 설명 문구</p>
+                  <div class="form_source">
+                    <button class="btn_show_source">CSS 보기</button>
+                    <div class="source">
+                      <xmp>
+                        <style>
+                          .account_input:not(:last-of-type) {
+                            margin-bottom: 24px;
+                          }
+
+                          .account_input label.input_label {
+                            display: inline-block;
+                            margin-bottom: 8px;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: var(--body_text);
+                          }
+
+                          .account_input p.error {
+                            margin-left: 8px;
+                            margin-top: 8px;
+                          }
+                        </style>
+                      </xmp>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 25%;">
+                <h3>Text Field</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="form_div">
+                <h5>Form - input 필드</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">이름 <span class="asterisk">*</span></label>
+                    <div class="account_content">
+                      <input type="text" placeholder="이름을 입력해 주세요">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input"> 
+                        <label for="" class="input_label">이름 <span class="asterisk">*</span></label> 
+                        <div class="account_content"> 
+                          <input type="text" placeholder="이름을 입력해 주세요"> 
+                        </div>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>Form - input Error Text</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">이름 <span class="asterisk">*</span></label>
+                    <div class="account_content">
+                      <input type="text" placeholder="이름을 입력해 주세요">
+                    </div>
+                    <p class="error">이름을 입력해 주세요.</p>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">이름 <span class="asterisk">*</span></label>
+                        <div class="account_content">
+                          <input type="text" placeholder="이름을 입력해 주세요">
+                        </div>
+                        <p class="error">이름을 입력해 주세요.</p>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>Form - input Info Text</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">추천인 입력</label>
+                    <div class="account_content">
+                      <input type="text" placeholder="추천인 회원 ID를 입력해 주세요">
+                    </div>
+                    <small class="noti c_brand">추천인 입력 후 회원가입 시 포인트가 지급됩니다. </small>
+                    <small class="noti">알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요. </small>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">추천인 입력</label>
+                        <div class="account_content">
+                          <input type="text" placeholder="추천인 회원 ID를 입력해 주세요">
+                        </div>
+                        <small class="noti c_brand">추천인 입력 후 회원가입 시 포인트가 지급됩니다. </small>
+                        <small class="noti">알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요. </small>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 50%;">
+                <h3>Checkbox & Radio & SelectBox</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="form_div">
+                <h5>Radio (회원가입)</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">성별 <span class="asterisk">*</span>
+                    </label>
+                    <div class="account_content">
+                      <div class="account_flex_box sex">
+                        <div class="radio--typeA">
+                          <label for="man">
+                            <input type="radio" name="radio_sex" id="man" checked><em></em> 남자
+                          </label>
+                        </div>
+                        <div class="radio--typeA">
+                          <label for="woman">
+                            <input type="radio" name="radio_sex" id="woman"><em></em> 여자
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">성별 <span class="asterisk">*</span>
+                        </label>
+                        <div class="account_content">
+                          <div class="account_flex_box sex">
+                            <div class="radio--typeA">
+                              <label for="man">
+                                <input type="radio" name="radio_sex" id="man" checked><em></em> 남자
+                              </label>
+                            </div>
+                            <div class="radio--typeA">
+                              <label for="woman">
+                                <input type="radio" name="radio_sex" id="woman"><em></em> 여자
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>Radio (배경소품 등록)</h5>
+                <div class="form">
+                  <div class="regA_input">
+                    <label for="" class="input_label">제작형식 <span class="asterisk">*</span></label>
+                    <div class="regA_content">
+                      <div class="bg_flex_box">
+                        <div class="radio--typeA">
+                          <label for="form1">
+                            <input type="radio" name="radio_form" id="form1" checked><em></em> 배경외부
+                          </label>
+                        </div>
+                        <div class="radio--typeA">
+                          <label for="form2">
+                            <input type="radio" name="radio_form" id="form2"><em></em> 배경내부
+                          </label>
+                        </div>
+                        <div class="radio--typeA">
+                          <label for="form3">
+                            <input type="radio" name="radio_form" id="form3"><em></em> 소품
+                          </label>
+                        </div>
+                        <div class="radio--typeA">
+                          <label for="form4">
+                            <input type="radio" name="radio_form" id="form4"><em></em> 3D클튜소재변환소품
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="regA_input">
+                        <label for="" class="input_label">제작형식 <span class="asterisk">*</span></label>
+                        <div class="regA_content">
+                          <div class="bg_flex_box">
+                            <div class="radio--typeA">
+                              <label for="form1">
+                                <input type="radio" name="radio_form" id="form1" checked><em></em> 배경외부
+                              </label>
+                            </div>
+                            <div class="radio--typeA">
+                              <label for="form2">
+                                <input type="radio" name="radio_form" id="form2"><em></em> 배경내부
+                              </label>
+                            </div>
+                            <div class="radio--typeA">
+                              <label for="form3">
+                                <input type="radio" name="radio_form" id="form3"><em></em> 소품
+                              </label>
+                            </div>
+                            <div class="radio--typeA">
+                              <label for="form4">
+                                <input type="radio" name="radio_form" id="form4"><em></em> 3D클튜소재변환소품
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>생년월일 SelectBox</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">생년월일 <span class="asterisk">*</span>
+                    </label>
+                    <div class="account_content">
+                      <div class="account_flex_box birth">
+                        <div class="select_box w100p">
+                          <select name="year" id="select_birth_year" class="nice-select select--typeA w100p">
+                            <option value="">년도</option>
+                          </select>
+                        </div>
+                        <div class="select_box">
+                          <select name="month" id="select_birth_month" class="nice-select select--typeA w100p">
+                            <option value="">월</option>
+                          </select>
+                        </div>
+                        <div class="select_box">
+                          <select name="day" id="select_birth_day" class="nice-select select--typeA w100p">
+                            <option value="">일</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">생년월일 <span class="asterisk">*</span>
+                        </label>
+                        <div class="account_content">
+                          <div class="account_flex_box birth">
+                            <div class="select_box w100p">
+                              <select name="year" id="select_birth_year" class="nice-select select--typeA w100p">
+                                <option value="">년도</option>
+                              </select>
+                            </div>
+                            <div class="select_box">
+                              <select name="month" id="select_birth_month" class="nice-select select--typeA w100p">
+                                <option value="">월</option>
+                              </select>
+                            </div>
+                            <div class="select_box">
+                              <select name="day" id="select_birth_day" class="nice-select select--typeA w100p">
+                                <option value="">일</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>휴대폰번호 SelectBox</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">휴대폰 인증 <span class="asterisk">*</span>
+                    </label>
+                    <div class="account_content">
+                      <div class="account_flex_box">
+                        <div class="tel_box">
+                          <select name="tel" id="tel" class="nice-select select--typeA w100p">
+                            <option value="">010</option>
+                            <option value="">011</option>
+                          </select>
+                          <span>-</span>
+                          <input type="number">
+                          <span>-</span>
+                          <input type="number">
+                        </div>
+                      </div>
+                      <div id="tel_auth_number" class="account_flex_box d-none mt8">
+                        <input type="text" placeholder="인증번호를 6자리를 입력해 주세요.">
+                        <button type="button" class="btn btn-lg btn_signup active">확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">휴대폰 인증 <span class="asterisk">*</span>
+                        </label>
+                        <div class="account_content">
+                          <div class="account_flex_box">
+                            <div class="tel_box">
+                              <select name="tel" id="tel" class="nice-select select--typeA w100p">
+                                <option value="">010</option>
+                                <option value="">011</option>
+                              </select>
+                              <span>-</span>
+                              <input type="number">
+                              <span>-</span>
+                              <input type="number">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guide_tab">
+            <div class="tab-title">
+              <div class="tab-title_txt" style="left: 75%;">
+                <h3>ETC</h3>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="form_div">
+                <h5>주소검색</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">주소</label>
+                    <div class="account_content">
+                      <div class="account_flex_box mb8">
+                        <input type="text" class="input_address" disabled>
+                        <button type="button" id="btn_find_address" class="btn btn-lg btn_signup address">주소검색</button>
+                      </div>
+                      <input type="text" id="address" class="mb8" placeholder="">
+                      <input type="text" id="detail_address" placeholder="상세주소를 입력해 주세요">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">주소</label>
+                        <div class="account_content">
+                          <div class="account_flex_box mb8">
+                            <input type="text" class="input_address" disabled>
+                            <button type="button" id="btn_find_address" class="btn btn-lg btn_signup address">주소검색</button>
+                          </div>
+                          <input type="text" id="address" class="mb8" placeholder="">
+                          <input type="text" id="detail_address" placeholder="상세주소를 입력해 주세요">
+                        </div>
+                      </div>
+                      <!-- 스크립트 -->
+                      <script>
+                        $("#btn_find_address").click(function () {
+                          new daum.Postcode({
+                            oncomplete: function (data) {
+                              $("#btn_find_address").siblings("input").val(data.zonecode);
+                              $("#btn_find_address")
+                                .parents(".account_flex_box")
+                                .siblings("#address")
+                                .val(data.address);
+                              $("#detail_address").focus();
+                            },
+                          }).open();
+                        });
+                      </script>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+              <div class="form_div">
+                <h5>이메일 인증</h5>
+                <div class="form">
+                  <div class="account_input">
+                    <label for="" class="input_label">이메일 <span class="asterisk">*</span>
+                    </label>
+                    <div class="account_content">
+                      <div class="account_flex_box">
+                        <input type="text" placeholder="이메일 주소를 입력해 주세요">
+                        <button type="button" class="btn btn-lg btn_signup" onclick="emailVertify(event)">인증요청</button>
+                      </div>
+                      <div id="email_auth_number" class="account_flex_box d-none mt8">
+                        <input type="text" placeholder="인증번호를 6자리를 입력해 주세요.">
+                        <button type="button" class="btn btn-lg btn_signup active">확인</button>
+                      </div>
+                      <small class="noti">
+                        알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_source">
+                  <button class="btn_show_source">소스보기</button>
+                  <div class="source">
+                    <xmp>
+                      <div class="account_input">
+                        <label for="" class="input_label">이메일 <span class="asterisk">*</span>
+                        </label>
+                        <div class="account_content">
+                          <div class="account_flex_box">
+                            <input type="text" placeholder="이메일 주소를 입력해 주세요">
+                            <button type="button" class="btn btn-lg btn_signup" onclick="emailVertify(event)">인증요청</button>
+                          </div>
+                          <div id="email_auth_number" class="account_flex_box d-none mt8">
+                            <input type="text" placeholder="인증번호를 6자리를 입력해 주세요.">
+                            <button type="button" class="btn btn-lg btn_signup active">확인</button>
+                          </div>
+                          <small class="noti">
+                            알림 및 로그인 시 사용되는 이메일이니 정확하게 입력해 주세요.
+                          </small>
+                        </div>
+                      </div>
+                      <!-- 스크립트 -->
+                      <script>
+                        function emailVertify(e) {
+                          // 인증요청 버튼 disabled
+                          e.target.disabled = true;
+
+                          // 인증번호 입력 영역 show
+                          $('#email_auth_number').removeClass('d-none')
+                        }
+                      </script>
+                    </xmp>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    $('.btn_show_source').click(function() {
+      $(this).siblings('.source').slideToggle()
+    })
+
+    function emailVertify(e) {
+      // 인증요청 버튼 disabled
+      e.target.disabled = true;
+
+      // 인증번호 입력 영역 show
+      $('#email_auth_number').removeClass('d-none')
+    }
+  </script>
+</body>
+
+</html>

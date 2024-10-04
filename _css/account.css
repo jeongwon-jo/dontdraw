@@ -1,0 +1,492 @@
+@charset "UTF-8";
+/* #### 계정(account) 관련 페이지 #### */
+.account__container {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 80px;
+  padding-bottom: 250px;
+}
+
+.account_title {
+  padding-bottom: 17px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--line_color);
+}
+
+.account_title.login {
+  padding-bottom: 0;
+  text-align: center;
+  border-bottom: none;
+}
+
+.account_title .logo {
+  display: inline-block;
+  width: 174px;
+  height: 32px;
+  background: url(/_img/common/logo.png) no-repeat center center/ contain;
+}
+
+.account_title h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 32px;
+}
+
+.account_title p {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--info_text);
+}
+
+.form_account .error {
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.account_input:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.account_input label.input_label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--body_text);
+}
+
+.account_input p.error {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.account_menu {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account_menu li {
+  padding: 0 40px;
+  border-right: 1px solid var(--line_color);
+  color: var(--body_text);
+}
+
+.account_menu li.link_signup {
+  color: var(--brand_color);
+  font-weight: 500;
+}
+
+.account_menu li:first-child {
+  padding-left: 0px;
+}
+
+.account_menu li:last-child {
+  border-right: none;
+  padding-right: 0px;
+}
+
+/* 로그인 */
+.account__area .btn_brand {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--brand_color);
+  margin-top: 40px;
+}
+
+.account_sns {
+  margin-top: 48px;
+}
+
+.account_sns .sns_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.account_sns .sns_title span.bar {
+  width: 100%;
+  height: 1px;
+  background-color: var(--line_color);
+}
+
+.account_sns .sns_title h5 {
+  display: inline-block;
+  width: fit-content;
+  flex-basis: fit-content;
+  flex-shrink: 0;
+  line-height: 24px;
+  color: var(--info_text);
+}
+
+.account_sns .sns_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.account_sns .sns_list>li {
+  display: inline-block;
+  width: 100%;
+  height: 56px;
+}
+
+.account_sns .sns_list>li>a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line_color);
+}
+
+.account_sns .sns_list>li.sns_google>a {
+  background: url(/_img/common/account_google.svg) no-repeat center center / 24px
+}
+
+.account_sns .sns_list>li.sns_kakao>a {
+  background: url(/_img/common/account_kakao.svg) no-repeat center center / 24px
+}
+
+.account_sns .sns_list>li.sns_naver>a {
+  background: url(/_img/common/account_naver.svg) no-repeat center center / 24px
+}
+
+.account_sns .sns_list>li.sns_apple>a {
+  background: url(/_img/common/account_apple.svg) no-repeat center center / 24px
+}
+
+/* 아이디, 비밀번호 찾기 */
+.find-idpw_result {
+  margin-top: 40px;
+}
+
+.find-idpw_result .result_tit {
+  text-align: center;
+  line-height: 24px;
+  color: var(--body_text2);
+}
+
+.result_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--line_color);
+  background-color: var(--bg_light);
+}
+
+.result_content p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--disabled);
+}
+
+.result_btns {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-top: 48px;
+}
+
+.result_btns>* {
+  font-size: 18px;
+}
+
+.result_btns .btn_brand {
+  font-weight: 600;
+}
+
+.result_btns .btn_transparent {
+  font-weight: 500;
+}
+
+/* #### 회원가입 #### */
+.signup-link__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  background-color: var(--bg_deep);
+  border-radius: 8px;
+}
+
+.signup-link__box li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--disabled);
+}
+
+.signup-link__box li.on {
+  background-color: #fff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--body_text);
+}
+
+.signup-link__box li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 44px;
+}
+
+.signup_title {
+  width: 100%;
+  border-bottom: 1px solid var(--line_deep_color);
+}
+
+.signup_title h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+  padding-bottom: 17px;
+}
+
+.form_signup {
+  margin-top: 32px;
+}
+
+.account_flex_box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.account_flex_box .btn_signup {
+  flex-basis: 87px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.account_flex_box .btn_signup:disabled,
+.account_flex_box .btn_signup.disabled {
+  background-color: var(--bg_light);
+  color: var(--disabled);
+}
+
+.account_flex_box .btn_signup.active {
+  background-color: var(--brand_color);
+  color: #fff;
+  border: 1px solid var(--brand_color);
+}
+
+.account_content .tel_box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.account_content .tel_box .select--typeA,
+.account_content .tel_box input[type=number] {
+  flex: 1;
+}
+
+.agree_checklist {
+  margin-top: 8px;
+  width: 100%;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--line_color);
+}
+
+.agree_checklist .agree {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.agree_checklist .agree:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox--typeA.chkall {
+  color: #505050;
+}
+
+/* 일반 회원가입 */
+.normal_signup {
+  padding-top: 48px;
+}
+
+.normal_signup .account_sns {
+  margin-top: 8px;
+}
+
+.normal_signup .account_sns>a.btn_brand {
+  margin-top: 0px;
+  background-color: #fff;
+  border: 1px solid var(--brand_color);
+  color: var(--brand_color);
+  transition: 0.35s;
+}
+
+.normal_signup .account_sns>a.btn_brand:hover {
+  background-color: var(--brand_color);
+  color: #fff;
+}
+
+.normal_signup .sns_title {
+  margin-top: 40px;
+}
+
+.normal_signup .sns_list {
+  margin-top: 24px;
+  flex-direction: column;
+}
+
+.normal_signup .sns_list>li {
+  width: 100%;
+  height: 56px;
+}
+
+.normal_signup .account_sns .sns_list>li>a {
+  border: none;
+  text-align: center;
+  padding-left: 0px;
+  line-height: 56px;
+}
+
+.normal_signup .sns_list>li a span {
+  display: inline-block;
+  line-height: 56px;
+  height: 100%;
+  padding-left: 38px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.normal_signup .sns_list>li.sns_kakao>a {
+  background: none;
+  background-color: #FEE500;
+}
+
+.normal_signup .sns_list>li.sns_naver>a {
+  background: none;
+  background-color: #01C73C;
+  color: #fff;
+}
+
+.normal_signup .sns_list>li.sns_google>a {
+  background: none;
+  background-color: #fff;
+  border: 1px solid var(--line_color);
+}
+
+.normal_signup .sns_list>li.sns_apple>a {
+  background: none;
+  background-color: #111111;
+  border: 1px solid #111111;
+  color: #fff;
+}
+
+.normal_signup .sns_list>li.sns_google>a span {
+  background: url(/_img/common/account_google.svg) no-repeat center left 0px / 24px
+}
+
+.normal_signup .sns_list>li.sns_kakao>a span {
+  background: url(/_img/common/account_kakao2.svg) no-repeat center left 0px / 24px
+}
+
+.normal_signup .sns_list>li.sns_naver>a span {
+  background: url(/_img/common/account_naver_white.svg) no-repeat center left 0px / 24px
+}
+
+.normal_signup .sns_list>li.sns_apple>a span {
+  background: url(/_img/common/account_apple_white.svg) no-repeat center left 0px / 24px
+}
+
+.normal_signup .btn_brand {
+  margin-top: 48px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.normal_signup p.go_login {
+  margin-top: 32px;
+  color: var(--info_text);
+  text-align: center;
+}
+
+.normal_signup p.go_login>a {
+  margin-left: 8px;
+}
+
+.input_address {
+  max-width: 140px;
+}
+
+.account_flex_box.birth .select_box:nth-child(2),
+.account_flex_box.birth .select_box:nth-child(3) {
+  width: 100%;
+  max-width: 140px;
+}
+
+.account_flex_box.sex {
+  gap: 32px;
+}
+
+/* 기업 회원가입 */
+.company_signup {
+  padding-top: 48px;
+}
+
+.company_signup .btn_brand {
+  margin-top: 48px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 회원가입 완료 */
+.signup_comp__container {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.signup_comp__container>img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.signup_comp__container .complete_title {
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.signup_comp__container .complete_title h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--title_text);
+}
+
+.signup_comp__container .complete_title p {
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--info_text);
+}

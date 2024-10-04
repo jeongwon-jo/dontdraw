@@ -1,0 +1,13 @@
+.main_swiper .slider_prev,
+.main_swiper .slider_next : 2
+.card--typeA .card_thum .thum_img:after : 98
+.card--typeA .card_thum .thum_badges, .card--typeA .card_thum .btn_like : 99
+.header : 100
+.filter-select__list : 100
+.mobile_navigation : 100
+.quick-menu : 101
+.recent_search_word : 101
+aside.sidebar : 101
+.select--typeA .list, .select--typeB .list : 500
+.modal : 1000
+.modal_cart : 1000

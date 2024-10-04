@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+:root {
+  /* #### color #### */
+  --white: #ffffff;
+  --bg_light: #F7F7FB;
+  --bg_deep: #F1F1F5;
+  --bg_disabled: #F7F7F8;
+  --title_text: #111111;
+  --sub_text: #484F54;
+  --body_text: #505050;
+  --body_text2: #333333;
+  --info_text: #767676;
+  --line_color: #E5E5EC;
+  --line_deep_color: #111111;
+  --line_light_color: #F1F1F5;
+  --brand_color: #23A7DE;
+  --disabled: #999999;
+  --error: #F04438;
+
+  /* content */
+  --content_width : 1880px;
+}
